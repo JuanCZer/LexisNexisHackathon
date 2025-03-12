@@ -1,0 +1,32 @@
+<div class="mapa-container">
+  <div class="controls">
+    <div class="inputs-container">
+      <div class="input-group">
+        <label for="lat">Latitud:</label>
+        <input
+          id="lat"
+          type="number"
+          step="any"
+          [(ngModel)]="latitude"
+          (keydown)="onKeydown($event)"
+        />
+      </div>
+      <div class="input-group">
+        <label for="lng">Longitud:</label>
+        <input
+          id="lng"
+          type="number"
+          step="any"
+          [(ngModel)]="longitude"
+          (keydown)="onKeydown($event)"
+        />
+      </div>
+    </div>
+  <button (click)="updateLocation()">Cambiar Ubicación</button>
+</div>
+
+
+  <div class="map-wrapper">
+    <div id="map"></div>
+  </div>
+</div>

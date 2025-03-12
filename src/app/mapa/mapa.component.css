@@ -1,0 +1,69 @@
+.mapa-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.inputs-container {
+  display: flex;
+  gap: 20px; /* Espacio entre cada grupo */
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center; /* Centra verticalmente label e input */
+  gap: 8px; /* Espacio entre el label y el input */
+}
+
+.input-group label {
+  color: white;
+  font-size: 14px;
+  /* Puedes ajustar el ancho si deseas alinear múltiples grupos */
+  text-align: right;
+  min-width: 70px; /* Opcional: fija un ancho mínimo para los labels */
+}
+
+.input-group input {
+  width: 150px;               /* Ancho fijo o ajustable */
+  padding: 8px;
+  font-size: 14px;
+  background-color: #192033;  /* Fondo del input */
+  border: none;
+  border-radius: 8px;         /* Bordes redondeados */
+  color: #fff;
+}
+
+.controls button {
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #3D6CEE;
+  color: #fff;
+}
+
+/* Contenedor del mapa centrado */
+.map-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el mapa */
+#map {
+  width: 80%;
+  height: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #000;
+}

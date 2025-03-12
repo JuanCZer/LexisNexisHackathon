@@ -1,0 +1,32 @@
+.personajes-container {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #0F131F; /* Borde por defecto */
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: #192033;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  border-color: #2145a8;  /* Nuevo color de borde al pasar el cursor */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* Mayor relieve al pasar el mouse */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card h3 {
+  color: white;
+}

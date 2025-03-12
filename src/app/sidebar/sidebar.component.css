@@ -1,0 +1,73 @@
+.sidebar {
+  position: relative;      /* Para posicionar los pseudo-elementos */
+  overflow: hidden;        /* Oculta las partes de las elipses que sobresalgan */
+  width: 250px;
+  height: 100%;
+  background-color: #192033; /* Fondo oscuro base */
+  color: #fff;
+  padding-top: 50px;
+}
+
+/* Elipse superior izquierda */
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: #0F131F;      /* Tono más oscuro */
+  opacity: 0.3;             /* Transparencia ajustable */
+  border-radius: 50%;       /* Círculo */
+  z-index: 0;               /* Detrás del contenido */
+}
+
+/* Elipse inferior derecha */
+.sidebar::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: #0F131F;      /* Mismo tono u otro similar */
+  opacity: 0.2;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Estilos para el contenido del sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative; /* Para que el contenido quede sobre los pseudo-elementos */
+  z-index: 1;
+  text-align: center; /* Centra los enlaces dentro del ul */
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Se limita el ancho de los enlaces y se centran */
+.sidebar a {
+  display: block;
+  width: 80%;         /* Ocupa el 80% del ancho del contenedor */
+  margin: 0 auto;     /* Se centra horizontalmente */
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover que solo afecta al ancho del enlace */
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+}

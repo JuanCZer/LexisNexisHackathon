@@ -1,0 +1,9 @@
+<div class="personajes-container">
+  <div class="card" *ngFor="let personaje of personajes">
+    <img [src]="personaje.image" (click)="openModal(personaje)" alt="{{personaje.name}}">
+    <h3>{{personaje.name}}</h3>
+  </div>
+</div>
+
+<!-- Modal de información del personaje -->
+<app-character-modal *ngIf="showModal" [character]="selectedCharacter" (close)="closeModal()"></app-character-modal>
